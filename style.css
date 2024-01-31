@@ -76,6 +76,9 @@ img{
     height: 50px;
     margin-bottom: 32px;
 }
+.secButton:active{
+    background-color: hsl(0, 0%, 100%, 0.50);
+}
 .numbers{
     display: flex;
     flex-direction: row;
