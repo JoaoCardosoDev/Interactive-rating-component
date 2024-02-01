@@ -19,7 +19,7 @@ html{
 }
 body{
     width: 350px;
-    background-color: hsl(213, 19%, 18%);
+    background: linear-gradient(155deg, hsl(213, 19%, 18%) 60%,hsl(216, 16%, 12%)) ;
     font-size: 15px;
     font-family: Overpass;
     color: white;
@@ -61,18 +61,21 @@ button:active{
 
 .star{
     background-color: hsl(0, 0%, 100%, 0.05);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 25px;
     margin-bottom: 25px;
     text-align: center;
+    position: relative;
 }
 
 img{
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     display: inline-block;
-    margin: auto;
+    position: absolute;
+    top: 30%;
+    left: 32%
 }
 .secButton{
     background-color: hsl(0, 0%, 100%, 0.05);
@@ -89,6 +92,13 @@ img{
 .secButton:active{
     background-color: hsl(25, 97%, 53%);
     color: hsl(0, 0%, 100%);
+}
+.activeBtn{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 32px;
 }
 .numbers{
     display: flex;
