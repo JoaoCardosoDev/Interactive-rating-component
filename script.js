@@ -1,11 +1,12 @@
+window.onload = () => {
 
-const sel1 = document.getElementById("1");
-const sel2 = document.getElementById("2");
-const sel3 = document.getElementById("3");
-const sel4 = document.getElementById("4");
-const selt5 = document.getElementById("5");
-const submit = document.getElementsByClassName("submit");
-let res = 0;
+    const sel1 = document.getElementById("1");
+    const sel2 = document.getElementById("2");
+    const sel3 = document.getElementById("3");
+    const sel4 = document.getElementById("4");
+    const sel5 = document.getElementById("5");
+    const submit = document.getElementById("submit");
+    let res = 0;
 
 sel1.onclick = () => { 
     res = 1;
@@ -23,25 +24,26 @@ sel5.onclick = () => {
     res = 5;
 }
 
-submit.onclick = (res) => {
-    switch (res) {
-        case 1:
+submit.onclick = () => {
+    switch (true) {
+        case res === 1:
             console.log("1")
             break;
-        case 2:
+        case res === 2:
             console.log("2")
             break;
-        case 3:
+        case res === 3:
             console.log("3")
             break;
-        case 4:
+        case res === 4:
             console.log("4")
             break;
-        case 5:
+        case res === 5:
             console.log("5")
             break;
-    
+            
         default:
             break;
     }
+}
 }

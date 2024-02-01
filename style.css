@@ -51,9 +51,14 @@ button{
     letter-spacing: 2px;
 
 }
+button:active{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
 .submit{
     width: 100%;
 }
+
 .star{
     background-color: hsl(0, 0%, 100%, 0.05);
     width: 40px;
@@ -76,8 +81,14 @@ img{
     height: 50px;
     margin-bottom: 32px;
 }
-.secButton:active{
+
+.secButton:hover{
     background-color: hsl(0, 0%, 100%, 0.50);
+    color: hsl(0, 0%, 100%);
+}
+.secButton:active{
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
 }
 .numbers{
     display: flex;
