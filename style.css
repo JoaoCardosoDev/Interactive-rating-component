@@ -38,6 +38,7 @@ p{
     color: hsl(217, 12%, 63%);
     margin-bottom: 24px;
     line-height: 24px;
+    font-size: 15px;
 }
 button{
     width: 100%;
@@ -68,8 +69,14 @@ button:active{
     text-align: center;
     position: relative;
 }
+.thankYouImg{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
-img{
+}
+
+.imgStar{
     width: 18px;
     height: 18px;
     display: inline-block;
@@ -107,3 +114,24 @@ img{
     gap: 24px;
     justify-content: center;
 }
+.resultTY{
+    display: none;
+    background-color: hsl(0, 0%, 100%, 0.05);
+    color: hsl(25, 97%, 53%);
+    border-bottom: 24px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: fit-content;
+    padding: 10px 24px;
+    font-size: 15px;
+    margin: 32px auto;
+    letter-spacing: 1px;
+}
+
+.imgTY{
+    width: 190px;
+    margin-top: 24px;
+}
+

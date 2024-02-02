@@ -35,28 +35,8 @@ sel5.onclick = () => {
     checked(sel5);
 }
 
-submit.onclick = () => {
-    switch (true) {
-        case res === 1:
-            thankYou(res);
-            break;
-        case res === 2:
-            console.log("2")
-            break;
-        case res === 3:
-            console.log("3")
-            break;
-        case res === 4:
-            console.log("4")
-            break;
-        case res === 5:
-            console.log("5")
-            break;
-            
-        default:
-            break;
-    }
-}
+submit.onclick = () => {thankYou(res);};
+
 }
 
 
@@ -74,13 +54,26 @@ function checked(button) {
 }
 
 function thankYou(res) {
-    let img = document.getElementsByTagName("img");
-    let text = document.getElementsByClassName("title");
-    let title = document.getElementsByTagName("h1")
-    img.src = "images/illustration-thank-you";
+    let img = document.querySelector("img");
+    let text = document.querySelector("p");
+    let title = document.querySelector("h1");
+    let resultTY = document.getElementsByTagName("span")[0];
+    let imgDiv = document.getElementsByClassName("star")[0];
+    let numbers = document.getElementsByClassName("numbers")[0];
+    let submit = document.getElementsByClassName("submit")[0];
+    numbers.style.display = "none"
+    submit.style.display = "none"
+
+    resultTY.classList.add("resultTY")
+    imgDiv.classList.replace("star", "thankYouImg");
+    img.classList.replace("imgStar", "imgTY");
+    text.style.textAlign = "center"
+    text.style.margin = "4px"
+    title.style.display = "flex"
+    title.style.justifyContent = "center"
+    resultTY.innerText = `You selected ${res} out of 5`
+    img.src = "images/illustration-thank-you.svg";
     text.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!";
     title.innerText = "Thank you!";
     console.log("smth wrong")
-
-
 }
