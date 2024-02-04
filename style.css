@@ -19,23 +19,23 @@ html{
 }
 body{
     width: 350px;
-    background: linear-gradient(155deg, hsl(213, 19%, 18%) 60%,hsl(216, 16%, 12%)) ;
+    background: radial-gradient(circle at center top,hsl(213, 19%, 18%), hsl(216, 16%, 12%));
     font-size: 15px;
     font-family: Overpass;
     color: white;
     height: auto;
     margin: auto;
     padding: 32px;
-    border-radius: 25px;
+    border-radius: 16px;
 }
 h1{
-    font-weight: 400;
+    font-weight: 700;
     font-size: 28px;
     margin-bottom: 8px;
 }
 p{
     font-weight: 400;
-    color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%, 0.5);
     margin-bottom: 24px;
     line-height: 24px;
     font-size: 15px;
@@ -44,13 +44,12 @@ button{
     width: 100%;
     border-radius: 25px;
     padding-top: 16px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     font-size: 15px;
     color: hsl(0, 0%, 100%);
     background-color: hsl(25, 97%, 53%);
     font-weight: 400;
     letter-spacing: 2px;
-
 }
 button:active{
     background-color: hsl(0, 0%, 100%);
@@ -117,17 +116,18 @@ button:active{
 .resultTY{
     display: none;
     background-color: hsl(0, 0%, 100%, 0.05);
-    color: hsl(25, 97%, 53%);
+    color: hsla(25, 97%, 53%, 0.678);
     border-bottom: 24px;
     display: flex;
     text-align: center;
     justify-content: center;
-    border-radius: 25px;
+    border-radius: 32px;
     width: fit-content;
-    padding: 10px 24px;
+    padding: 8px 16px;
+    padding-bottom: 6px;
     font-size: 15px;
     margin: 32px auto;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .imgTY{
@@ -135,3 +135,54 @@ button:active{
     margin-top: 24px;
 }
 
+@media screen and (max-width: 375px) {
+
+
+    body {
+        background-color: white;
+        width: 260px;
+        padding: 24px;
+    }
+    .imgTY{
+        width: 140px;
+        height: 100px;
+    }
+    p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .resultTY{
+        font-size: 14px;
+        margin-top: 24px;
+        padding: 8px 8px;
+        padding-bottom: 6px;
+    }
+    .secButton{
+        width: 40px;
+        height: 40px;
+    }
+    .numbers{
+        gap: 16px;
+        text-align: center;
+        line-height: 13px;
+    }
+    .star{
+        width: 40px;
+        height: 40px;
+    }
+    .imgStar{
+        width: 15px;
+        height: 15px;
+    }
+    .activeBtn{
+        width: 40px;
+        height: 40px;
+    }
+    .submit{
+        margin-bottom: 8px;
+    }
+
+}
