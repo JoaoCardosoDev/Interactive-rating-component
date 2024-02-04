@@ -14,9 +14,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,83 +28,81 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Project Screenshot](./Interactive-rating-component-screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://joaocardosodev.github.io/Interactive-rating-component/
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+-HTML
+-CSS
+-JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+I used this project as a way to practice some JS, the solution I used to keep the focus on the buttons is far from optimized but it allowed me to use more JS. The part of the code in question is this one:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function resetBtn(list){
+    list.forEach(element => {
+        if (element.classList.contains('activeBtn'));
+            element.classList.remove('activeBtn');
+            element.classList.add('secButton'); 
+    });
+function checked(button) {
+    button.classList.remove('secButton')
+    button.classList.add('activeBtn')
+};
+```
+
+I used this function to reset the class on the div I was clicking so that it would change to the correct status. I could've done this more easily with :focus on the CSS document.
+
+The section that made me doubt my solution the most was this:
+
+```js
+function thankYou(res) {
+    let img = document.querySelector("img");
+    let text = document.querySelector("p");
+    let title = document.querySelector("h1");
+    let resultTY = document.getElementsByTagName("span")[0];
+    let imgDiv = document.getElementsByClassName("star")[0];
+    let numbers = document.getElementsByClassName("numbers")[0];
+    let submit = document.getElementsByClassName("submit")[0];
+    numbers.style.display = "none"
+    submit.style.display = "none"
+
+    resultTY.classList.add("resultTY")
+    imgDiv.classList.replace("star", "thankYouImg");
+    img.classList.replace("imgStar", "imgTY");
+    text.style.textAlign = "center"
+    text.style.margin = "4px"
+    title.style.display = "flex"
+    title.style.justifyContent = "center"
+    resultTY.innerText = `You selected ${res} out of 5`
+    img.src = "images/illustration-thank-you.svg";
+    text.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!";
+    title.innerText = "Thank you!";
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I used the thankYou() function to change the slate. Probably there is a much simpler solution, the one I arrived to seems a bit convoluted.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'd like to keep working on my Javascript proficiency with real use cases and get much more confortable manipulating HTML/CSS.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- https://developer.mozilla.org/en-US/docs/Web - Used MDN as my main documentation source for the project.
+- ChatGPT 3.5 - Whenever I got stuck and couldn't figure out through the documentation itself I used ChatGPT to help me out, tried not to get direct solutions as I think that is detrimental at this stage.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- LinkedIn - https://www.linkedin.com/in/joao-cardoso-dev/
+- Frontend Mentor - https://www.frontendmentor.io/profile/JoaoCardosoDev
